@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const leadsRouter = require('./routes/leads');
+const connectDB = require('./config/db');
+
+connectDB();
 
 app.use(express.json());
 
